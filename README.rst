@@ -1,11 +1,15 @@
 .. image:: https://travis-ci.org/adrianoveiga/django-file-validator.svg?branch=master
     :target: https://travis-ci.org/adrianoveiga/django-file-validator
 
+.. image:: https://badge.fury.io/py/django-file-validator.svg
+    :target: https://badge.fury.io/py/django-file-validator
+
 
 django-file-validator
 ------------------------
 
 Simple project to validate FileFields/ImageFields, like max size of uploaded file.
+
 Until now, there is only one validator: MaxSizeValidator.
 
 
