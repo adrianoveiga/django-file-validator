@@ -1,2 +1,3 @@
 django-file-validator>=0.0.1
 Pillow
+coverage
