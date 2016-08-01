@@ -2,8 +2,8 @@
 django-file-validator
 ------------------------
 
- Simple project to validate FileFields/ImageFields, like max size of uploaded file.
- Until now, there is only one validator: MaxSizeValidator.
+Simple project to validate FileFields/ImageFields, like max size of uploaded file.
+Until now, there is only one validator: MaxSizeValidator.
 
 
 Dependencies
