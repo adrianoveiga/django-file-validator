@@ -36,11 +36,11 @@ In your models, import and use MaxSizeValidator:
 
     from django_file_validator.validators import MaxSizeValidator
 
-    class YourModle(models.Model):
+    class YourModel(models.Model):
         
         . . .
 
-        image = models.ImageField( null=True, blank=True, upload_to='uploads/mymodel/img/', validators=[MaxSizeValidator()])
+        image = models.ImageField( null=True, blank=True, upload_to='uploads/yourmodel/img/', validators=[MaxSizeValidator()])
 
         . . . 
 
@@ -51,13 +51,13 @@ You can change the max size value passing a parameter on each attibute:
 
     from django_file_validator.validators import MaxSizeValidator
 
-    class YourModle(models.Model):
+    class YourModel(models.Model):
         
         . . .
 
-        default_image = models.ImageField( null=True, blank=True, upload_to='uploads/mymodel/img/', validators=[MaxSizeValidator()])
-        big_image = models.ImageField( null=True, blank=True, upload_to='uploads/mymodel/img/', validators=[MaxSizeValidator(2048)])
-        small_image = models.ImageField( null=True, blank=True, upload_to='uploads/mymodel/img/', validators=[MaxSizeValidator(256)])
+        default_image = models.ImageField( null=True, blank=True, upload_to='uploads/yourmodel/img/', validators=[MaxSizeValidator()])
+        big_image = models.ImageField( null=True, blank=True, upload_to='uploads/yourmodel/img/', validators=[MaxSizeValidator(2048)])
+        small_image = models.ImageField( null=True, blank=True, upload_to='uploads/yourmodel/img/', validators=[MaxSizeValidator(256)])
 
         . . . 
 
