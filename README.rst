@@ -3,7 +3,7 @@ django-file-validator
 ------------------------
 
  Simple project to validate FileFields/ImageFields, like max size of uploaded file.
- Until now, there is only one validator: max_size_validator.
+ Until now, there is only one validator: MaxSizeValidator.
 
 
 Dependencies
@@ -23,17 +23,17 @@ Installation
 Usage
 -----
 
-In your models, import and use max_size_validator:
+In your models, import and use MaxSizeValidator:
 
 .. code-block:: python
 
-    from django_file_validator.validators import max_size_validator
+    from django_file_validator.validators import MaxSizeValidator
 
     class YourModle(models.Model):
         
         . . .
 
-        image = models.ImageField( null=True, blank=True, upload_to='uploads/mymodel/img/', validators=[max_size_validator()])
+        image = models.ImageField( null=True, blank=True, upload_to='uploads/mymodel/img/', validators=[MaxSizeValidator()])
 
         . . . 
 
@@ -42,15 +42,15 @@ You can change the max size value passing a parameter on each attibute:
 
 .. code-block:: python
 
-    from django_file_validator.validators import max_size_validator
+    from django_file_validator.validators import MaxSizeValidator
 
     class YourModle(models.Model):
         
         . . .
 
-        default_image = models.ImageField( null=True, blank=True, upload_to='uploads/mymodel/img/', validators=[max_size_validator()])
-        big_image = models.ImageField( null=True, blank=True, upload_to='uploads/mymodel/img/', validators=[max_size_validator(2048)])
-        small_image = models.ImageField( null=True, blank=True, upload_to='uploads/mymodel/img/', validators=[max_size_validator(256)])
+        default_image = models.ImageField( null=True, blank=True, upload_to='uploads/mymodel/img/', validators=[MaxSizeValidator()])
+        big_image = models.ImageField( null=True, blank=True, upload_to='uploads/mymodel/img/', validators=[MaxSizeValidator(2048)])
+        small_image = models.ImageField( null=True, blank=True, upload_to='uploads/mymodel/img/', validators=[MaxSizeValidator(256)])
 
         . . . 
 
