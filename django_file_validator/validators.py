@@ -7,16 +7,6 @@ from django.conf import settings
 
 FILE_SIZE_LIMIT_IN_KILOBYTES = 512 if not hasattr(settings, 'FILE_SIZE_LIMIT_IN_KILOBYTES') else settings.FILE_SIZE_LIMIT_IN_KILOBYTES
 
-
-# def max_size_validator(size_kb=FILE_SIZE_LIMIT_IN_KILOBYTES):
-#     def validate(fieldfile_obj):
-#         filesize = fieldfile_obj.file.size
-#         if filesize > size_kb*1024:
-#             raise ValidationError( 
-#                 _(u"Max size of file is {}! Your file has {}. Please, optimize your image or upload another one.".format(sizeof_in_kb(size_kb), sizeof_in_kb(filesize))) 
-#             )
-#     return validate
-
 @deconstructible
 class MaxSizeValidator(object):
     def __init__(self, size_kb=FILE_SIZE_LIMIT_IN_KILOBYTES):
@@ -33,7 +23,6 @@ class MaxSizeValidator(object):
         """
         Inspired by Fred Cirera's post: http://stackoverflow.com/a/1094933
         """
-        print num
         for unit in ['k','M','G']:
             if abs(num) < 1024.0:
                 return "%3.1f%s%s" % (num, unit, suffix)

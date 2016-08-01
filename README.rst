@@ -60,7 +60,7 @@ Configurations
 --------------
 
 - FILE_SIZE_LIMIT_IN_KILOBYTES
-    You can change the default max size limit of uploaded files, just putting this variable on settings.py. 
+    You can change the default max size limit of uploaded files, just putting this variable on settings.py. Default value is 512 kB.
 
     .. code-block:: python
         
