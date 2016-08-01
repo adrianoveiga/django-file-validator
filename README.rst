@@ -1,3 +1,6 @@
+.. image:: https://travis-ci.org/adrianoveiga/django-file-validator.svg?branch=master
+    :target: https://travis-ci.org/adrianoveiga/django-file-validator
+
 
 django-file-validator
 ------------------------
