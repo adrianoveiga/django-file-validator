@@ -12,11 +12,12 @@ Simple project to validate FileFields/ImageFields, like max size of uploaded fil
 
 Until now, there is only one validator: MaxSizeValidator.
 
+NOT WORKING WITH NEW DJANGO 1.10.
 
 Dependencies
 ------------
 
-- Django 1.8 or higher (not tested on previous versions)
+- Django 1.8 or higher (not tested on previous versions) but lower than 1.10!!
 
 
 Installation
