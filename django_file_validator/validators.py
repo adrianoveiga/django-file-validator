@@ -19,6 +19,9 @@ class MaxSizeValidator(object):
                 _(u"Max size of file is {}! Your file has {}. Please, optimize your image or upload another one.".format(self.sizeof_in_kb(self.size_kb), self.sizeof_in_kb(filesize))) 
             )
 
+    def __eq__(self, other):
+        return self.size_kb == other.size_kb
+
     def sizeof_in_kb(self, num, suffix='B'):
         """
         Inspired by Fred Cirera's post: http://stackoverflow.com/a/1094933
