@@ -94,6 +94,7 @@ LANGUAGE_CODE = 'en-us'
 from django.utils.translation import ugettext_lazy as _
 LANGUAGES = (
     ('en', _('English')),
+    ('es', _('Spanish')),
     ('pt-br', _('Portuguese(BR)')),
 )
 #LOCALE_PATHS = (  os.path.join( BASE_DIR, 'locale' ), )
