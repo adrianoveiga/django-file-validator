@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'fooapp',
+    'django_file_validator',
 )
 
 MIDDLEWARE_CLASSES = (
