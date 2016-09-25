@@ -15,18 +15,20 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.conf import settings
+from django.conf.urls.i18n import i18n_patterns
+from django.views.static import serve
 
-urlpatterns = [
+urlpatterns = i18n_patterns(
     url(r'^admin/', include(admin.site.urls)),
-]
+)
 
 
 if settings.DEBUG:
     urlpatterns += [
-        url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {
+        url(r'^media/(?P<path>.*)$', serve, {
             'document_root': settings.MEDIA_ROOT,
         }),
-        url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {
+        url(r'^static/(?P<path>.*)$', serve, {
             'document_root': settings.STATIC_ROOT,
         }),
     ]
