@@ -28,6 +28,8 @@ Installation
    pip install django-file-validator
 
 
+**IMPORTANT:** If you want use django translations, you need to put 'django_file_validator' on your INSTALLED_APPS (on settings.py). Doing this, validator's error messages will be translated (only English, Spanish and Portuguese-BR for now).
+
 Usage
 -----
 
